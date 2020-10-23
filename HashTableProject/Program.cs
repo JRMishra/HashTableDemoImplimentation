@@ -6,7 +6,16 @@ namespace HashTableProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            HashTableBuilder hashTable = new HashTableBuilder();
+
+            //Console.WriteLine("Enter a sentence");
+            //hashTable.Sentence = Console.ReadLine();
+
+            //Console.Write("Word to check frequency : ");
+            //hashTable.WordToCheck = Console.ReadLine();
+
+            Console.WriteLine($"Frequency of \"{hashTable.WordToCheck}\" is {hashTable.FindFrequencyOfWord()}");
         }
     }
+
 }

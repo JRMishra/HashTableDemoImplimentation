@@ -8,11 +8,8 @@ namespace HashTableProject
         {
             HashTableBuilder hashTable = new HashTableBuilder();
 
-            //Console.WriteLine("Enter a sentence");
-            //hashTable.Sentence = Console.ReadLine();
-
-            //Console.Write("Word to check frequency : ");
-            //hashTable.WordToCheck = Console.ReadLine();
+            hashTable.Sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+	        hashTable.WordToCheck = "paranoid";
 
             Console.WriteLine($"Frequency of \"{hashTable.WordToCheck}\" is {hashTable.FindFrequencyOfWord()}");
         }

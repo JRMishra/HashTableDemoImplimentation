@@ -12,6 +12,7 @@ namespace HashTableProject
 	        hashTable.WordToCheck = "paranoid";
 
             Console.WriteLine($"Frequency of \"{hashTable.WordToCheck}\" is {hashTable.FindFrequencyOfWord()}");
+            hashTable.RemoveWord("avoidable");
         }
     }
 

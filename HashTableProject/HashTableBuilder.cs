@@ -9,6 +9,8 @@ namespace HashTableProject
         public string Sentence { get; set; } = "To be or not to be";
         public string WordToCheck { get; set; } = "be";
 
+        private MyMappingNode<string, int> myMap;
+
         public int FindFrequencyOfWord()
         {
             string[] words = Sentence.Split(' ');
@@ -25,7 +27,15 @@ namespace HashTableProject
                 }
             }
             int count = map.GetValue(WordToCheck);
+            myMap = map;
             return count;
+        }
+
+        public void RemoveWord(string wordToRemove)
+        {
+            MyMappingNode<string, int> map = myMap;
+            map.RemoveValue(wordToRemove);
+            Console.WriteLine($"Frequency of \"{wordToRemove}\" after removal is {map.GetValue(wordToRemove)} ");
         }
     }
 }

@@ -41,6 +41,27 @@ namespace HashTableProject
             linkedList.AddLast(item);
         }
 
+        public void RemoveValue(K key)
+        {
+            int position = GetPositionInArray(key);
+            LinkedList<KeyValue<K, V>> linkedList = LinkedListBuilder(position);
+            bool itemFound = false;
+            var foundItem = default(KeyValue<K, V>);
+
+            foreach (KeyValue<K, V> item in linkedList)
+            {
+                if (item.Key.Equals(key))
+                {
+                    itemFound = true;
+                    foundItem = item;
+                }
+            }
+            if (itemFound)
+            {
+                linkedList.Remove(foundItem);
+            }
+        }
+
         public V GetValue(K key)
         {
             int position = GetPositionInArray(key);
